@@ -1,0 +1,12 @@
+{
+  "name": "ipfs-box",
+  "version": "0.0.1",
+  "description": "File storage and sharing service on IPFS",
+  "main": "index.js",
+  "author": "Harun Djulic <harundulic@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "buffer": "^5.1.0",
+    "ipfs": "^0.28.2"
+  }
+}

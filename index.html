@@ -8,7 +8,6 @@
     <title>IPFS Box</title>
 
     <script src="index.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 </head>
 
@@ -16,10 +15,10 @@
     <!-- Intro -->
     <section class="section">
         <div class="container has-text-centered">
-            <img src="https://ipfs.io/ipfs/QmdtwZdkmjYMczvBEZHj4ZFiqfx6ajGc766hiZtyJ1gVfB" width="125px">
+            <img src="./undraw_collecting_fjjl.png" width="125px">
             <h1 class="title is-size-1">IPFS Box</h1>
             <h2 class="subtitle">
-                Upload files to decentralised file system - IPFS
+                Upload files to decentralized file system - IPFS
             </h2>
         </div>
     </section>
@@ -32,9 +31,6 @@
                 <label class="file-label">
                     <input id="fileInput" class="file-input" type="file">
                     <span class="file-cta">
-                        <span class="file-icon">
-                            <i class="fas fa-upload"></i>
-                        </span>
                         <span class="file-label">
                             Choose a file…
                         </span>
@@ -43,7 +39,7 @@
                 </label>
             </div>
             <a id="uploadBtn" class="button is-primary is-medium" style="margin-top:50px;visibility:hidden;">Upload to IPFS</a>
-            <div id="errorMsg"></div>
+            <div id="errorMsg" style="color:red;"></div>
             <div id="result"></div>
         </div>
     </section>

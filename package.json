@@ -6,7 +6,6 @@
   "author": "Harun Djulic <harundulic@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "buffer": "^5.1.0",
     "ipfs": "^0.28.2"
   }
 }

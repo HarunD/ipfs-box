@@ -3,7 +3,6 @@
     Simple file uploader using IPFS protocol
 */
 import IPFS from 'ipfs';
-import {Buffer} from 'buffer';
 
 let fileToUpload = null;
 let node = new IPFS();
@@ -56,13 +55,13 @@ function setUploadBtn() {
         prepareFile(fileToUpload);
     }
 
-    document.addEventListener('upload-started', e => {
+    document.addEventListener('upload-started', () => {
         $
             .classList
             .add('is-loading');
     });
 
-    document.addEventListener('upload-done', e => {
+    document.addEventListener('upload-done', () => {
         $
             .classList
             .remove('is-loading');
@@ -73,11 +72,9 @@ function prepareFile(file) {
     document.dispatchEvent(new Event('upload-started'));
 
     let reader = new FileReader();
-
     reader.onload = e => {
-        uploadFile(new Buffer(e.target.result));
+        uploadFile(node.types.Buffer.from(e.target.result));
     }
-
     reader.readAsArrayBuffer(file);
 }
 
